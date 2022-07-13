@@ -21,13 +21,7 @@ function Header() {
         >
           <Grid item>
             <Link to="/">
-              <Typography
-                variant="h4"
-                component="a"
-                sx={{ color: "white", fontSize: "20pt", fontWeight: "700" }}
-              >
-                Movie APP
-              </Typography>
+              <p className="project-name">Movie App</p>
             </Link>
           </Grid>
 
