@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Container, Grid } from "@mui/material";
 import React from "react";
 import "./header.css";
 import avatar from "../../images/AvatarMaker.png";
@@ -8,7 +8,7 @@ function Header() {
   //write code here
 
   return (
-    <header>
+    <Box component="header" bgcolor="background.msg">
       <Container sx={{ height: "100%" }}>
         <Grid
           container
@@ -19,7 +19,7 @@ function Header() {
             width: "100%",
           }}
         >
-          <Grid item>
+          <Grid item color="#fff">
             <Link to="/">
               <p className="project-name">Movie App</p>
             </Link>
@@ -30,7 +30,7 @@ function Header() {
           </Grid>
         </Grid>
       </Container>
-    </header>
+    </Box>
   );
 }
 

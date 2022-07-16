@@ -1,8 +1,8 @@
 header {
   height: 70px;
-  @apply bg-dark flex items-center;
+  @apply flex items-center;
 }
 
 header .project-name {
-  @apply text-3xl text-white font-bold;
+  @apply text-3xl font-bold;
 }
