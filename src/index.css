@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --card-light: #1a242f;
+  --paper-light: #ffffff;
+  --msg-light: #0f171e;
+  --default-light: #1a242f;
+
+  --card-dark: transparent;
+  --paper-dark: #ffffff;
+  --msg-dark: #0f171e;
+  --default-dark: #1a242f;
+
+  --test: rgba(255, 255, 255, 0.2);
+}

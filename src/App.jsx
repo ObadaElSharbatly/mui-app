@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Outlet } from "react-router-dom";
 import Header from "./components/header/Header";
 import { useState } from "react";
-import { darkTheme, lightTheme } from "./theme";
+import { darkTheme, lightTheme } from "./theme/theme";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

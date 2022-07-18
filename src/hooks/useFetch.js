@@ -18,7 +18,7 @@ const useFetch = () => {
     try {
       setIsLoading(true);
       setError(false);
-      await wait(2000);
+      await wait(600);
       const data = await fetchData(link);
       if (data.Response === "False") throw new Error(data.Error);
       return data;
