@@ -15,7 +15,6 @@ function Home() {
   // buttons
   // movie cards with the star
   const [movieName, setMovieName] = useState("");
-  const [movieType, setMovieType] = useState("");
   const { moviesList, setMoviesList } = useContext(MoviesContext);
   const { isLoading, error, performFetch } = useFetch();
   // update movie Name after typing
@@ -28,10 +27,10 @@ function Home() {
   useEffect(() => {
     if (movieName) {
       performFetch(
-        `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${movieName}&type=${movieType}&page=1  +7`
+        `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${movieName}`
       ).then(data => setMoviesList(data.Search));
     }
-  }, [movieName, movieType]);
+  }, [movieName]);
 
   return (
     <>

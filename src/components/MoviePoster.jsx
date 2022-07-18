@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Box, Card, CardMedia, Fab, Tooltip, useTheme } from "@mui/material";
+import { Card, CardMedia, Fab, Tooltip, useTheme } from "@mui/material";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import { MoviesContext } from "../contexts/MoviesContext";

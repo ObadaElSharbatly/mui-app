@@ -1,6 +1,6 @@
 import { Button, Grid, Rating, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import MovieInfo from "./MovieInfo";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardActionArea,
@@ -15,12 +15,12 @@ function MovieCard({ Poster, Title, Type, Year, imdbID }) {
 
   function mouseIn() {
     setIsMouseOver(true);
-    console.log("mouse in");
   }
+
   function mouseOut() {
     setIsMouseOver(false);
-    console.log("mouse in");
   }
+
   const navigate = useNavigate();
   async function goToMovie() {
     await wait(500);
