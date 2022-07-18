@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/homepage/Home";
-import MovieDetails from "./pages/movieDetails/MovieDetails";
 import { MoviesProvider } from "./contexts/MoviesContext";
+import SelectedMovie from "./pages/movieDetails/SelectedMovie";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<Home />} />
-          <Route path="/movie/:movieId" element={<MovieDetails />} />
+          <Route path="/movie/:movieId" element={<SelectedMovie />} />
         </Route>
       </Routes>
     </MoviesProvider>

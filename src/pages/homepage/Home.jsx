@@ -29,12 +29,7 @@ function Home() {
     if (movieName) {
       performFetch(
         `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${movieName}&type=${movieType}&page=1  +7`
-      )
-        .then(data => {
-          setMoviesList(data.Search);
-          return data;
-        })
-        .then(console.log);
+      ).then(data => setMoviesList(data.Search));
     }
   }, [movieName, movieType]);
 
