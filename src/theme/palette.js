@@ -135,7 +135,7 @@ export const lightPalette = {
     main: "#2196f3",
   },
   background: {
-    card: "rgb(175, 175, 175)",
+    card: "rgba(249, 247, 247, 0.81)",
     paper: "#fff",
     msg: "#0f171e",
     default: "#fff",
@@ -282,7 +282,7 @@ export const darkPalette = {
     main: "#fff",
   },
   background: {
-    card: "transparent",
+    card: "#0f171e8d",
     paper: "#fff",
     msg: "#0f171e",
     default: "#1a242f",
