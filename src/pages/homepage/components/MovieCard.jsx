@@ -23,7 +23,7 @@ function MovieCard({ Poster, Title, Type, Year, imdbID }) {
 
   const navigate = useNavigate();
   async function goToMovie() {
-    await wait(500);
+    await wait(300);
     navigate(`/movie/${imdbID}`);
   }
   const { shadows } = useTheme();
@@ -55,26 +55,26 @@ function MovieCard({ Poster, Title, Type, Year, imdbID }) {
           image={Poster}
           alt="Paella dish"
         />
-        {isMouseOver && (
-          <CardContent
-            sx={{
-              backgroundColor: "background.card",
-              position: "absolute",
-              bottom: 0,
-              width: "100%",
-            }}
-          >
-            <Typography variant="h6" color="text.onDark" fontWeight="bold">
-              {Title}
-            </Typography>
-            <Typography variant="h6" color="text.secondary" fontSize={15}>
-              {Type}
-            </Typography>
-            <Typography variant="h6" color="text.secondary" fontSize={15}>
-              {Year}
-            </Typography>
-          </CardContent>
-        )}
+        <CardContent
+          sx={{
+            backgroundColor: "background.card",
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
+            transition: "opacity 0.5s",
+            opacity: isMouseOver ? 1 : 0,
+          }}
+        >
+          <Typography variant="h6" color="text.onDark" fontWeight="bold">
+            {Title}
+          </Typography>
+          <Typography variant="h6" color="text.secondary" fontSize={15}>
+            {Type}
+          </Typography>
+          <Typography variant="h6" color="text.secondary" fontSize={15}>
+            {Year}
+          </Typography>
+        </CardContent>
       </Card>
     </CardActionArea>
   );
