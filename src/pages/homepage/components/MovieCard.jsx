@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Card,
   CardActionArea,
@@ -9,17 +9,9 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { wait } from "../../../utils/helpers";
+import "./movie-card.css";
 function MovieCard({ Poster, Title, Type, Year, imdbID }) {
   //write code here
-  const [isMouseOver, setIsMouseOver] = useState(false);
-
-  function mouseIn() {
-    setIsMouseOver(true);
-  }
-
-  function mouseOut() {
-    setIsMouseOver(false);
-  }
 
   const navigate = useNavigate();
   async function goToMovie() {
@@ -29,11 +21,7 @@ function MovieCard({ Poster, Title, Type, Year, imdbID }) {
   const { shadows } = useTheme();
 
   return (
-    <CardActionArea
-      onClick={goToMovie}
-      onMouseEnter={mouseIn}
-      onMouseLeave={mouseOut}
-    >
+    <CardActionArea onClick={goToMovie} className="movie-card">
       <Card
         sx={{
           position: "relative",
@@ -62,8 +50,8 @@ function MovieCard({ Poster, Title, Type, Year, imdbID }) {
             bottom: 0,
             width: "100%",
             transition: "opacity 0.5s",
-            opacity: isMouseOver ? 1 : 0,
           }}
+          className="movie-card-content"
         >
           <Typography variant="h6" color="text.onDark" fontWeight="bold">
             {Title}

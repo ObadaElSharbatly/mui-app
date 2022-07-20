@@ -1,8 +1,0 @@
-header {
-  height: 70px;
-  @apply flex items-center;
-}
-
-header .project-name {
-  @apply text-3xl font-bold;
-}
