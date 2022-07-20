@@ -1,7 +1,9 @@
 .movie-card-content {
+  transform: translateY(100px);
   opacity: 0;
 }
 
 .movie-card:hover .movie-card-content {
   opacity: 1;
+  transform: translateY(0);
 }

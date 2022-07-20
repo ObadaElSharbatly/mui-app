@@ -2,7 +2,6 @@ import * as lodash from "lodash";
 import { Box, Grid, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
-import "./home.css";
 import SearchIcon from "@mui/icons-material/Search";
 import Loader from "../../components/Loader";
 import MovieCard from "./components/MovieCard";
@@ -30,6 +29,7 @@ function Home() {
         `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${movieName}`
       ).then(data => setMoviesList(data.Search));
     }
+    // eslint-disable-next-line
   }, [movieName]);
 
   return (

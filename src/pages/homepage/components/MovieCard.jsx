@@ -49,7 +49,7 @@ function MovieCard({ Poster, Title, Type, Year, imdbID }) {
             position: "absolute",
             bottom: 0,
             width: "100%",
-            transition: "opacity 0.5s",
+            transition: "all 0.5s",
           }}
           className="movie-card-content"
         >

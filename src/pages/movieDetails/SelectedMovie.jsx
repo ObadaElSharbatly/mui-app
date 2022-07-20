@@ -20,6 +20,7 @@ function SelectedMovie() {
     // check if the id is in the favorite list
     const isFavorite = favoriteList.includes(movieId);
     setIsFavorite(isFavorite);
+    // eslint-disable-next-line
   }, []);
   return (
     <>
